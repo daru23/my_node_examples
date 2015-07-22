@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<feed xml:base="https://start.exactonline.nl/api/v1/666946/hrm/" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Divisions</title>
+  <id>https://start.exactonline.nl/api/v1/666946/hrm/Divisions</id>
+  <updated>2015-07-22T14:52:36Z</updated>
+  <link rel="self" title="Divisions" href="Divisions" />
+  <entry>
+    <id>https://start.exactonline.nl/api/v1/666946/hrm/Divisions(666946)</id>
+    <title type="text"></title>
+    <updated>2015-07-22T14:52:36Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Division" href="Divisions(666946)" />
+    <category term="Exact.Web.Api.Models.Division" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:BlockingStatus m:type="Edm.Int32">0</d:BlockingStatus>
+        <d:Code m:type="Edm.Int32">666946</d:Code>
+        <d:Country xml:space="preserve">NL </d:Country>
+        <d:CountryDescription>The Netherlands</d:CountryDescription>
+        <d:Created m:type="Edm.DateTime">2014-07-25T02:41:54.597</d:Created>
+        <d:Creator m:type="Edm.Guid">99d87844-e4ef-4ac5-968c-fb863eaced16</d:Creator>
+        <d:Currency>EUR</d:Currency>
+        <d:CurrencyDescription>Euro</d:CurrencyDescription>
+        <d:Customer m:type="Edm.Guid">9e660033-4bfc-42f5-8d5c-b62c6a8abe07</d:Customer>
+        <d:Description>Wodan Brothers</d:Description>
+        <d:HID m:type="Edm.Int64">1</d:HID>
+        <d:Main m:type="Edm.Boolean">false</d:Main>
+        <d:Modified m:type="Edm.DateTime">2015-07-22T14:45:58.997</d:Modified>
+        <d:Modifier m:type="Edm.Guid">101e57d4-17c5-4f28-adf0-2c79f2d4238a</d:Modifier>
+        <d:SiretNumber></d:SiretNumber>
+        <d:StartDate m:type="Edm.DateTime">2014-07-31T00:00:00</d:StartDate>
+        <d:Status m:type="Edm.Int16">0</d:Status>
+        <d:TaxOfficeNumber m:null="true" />
+        <d:TaxReferenceNumber m:null="true" />
+        <d:VATNumber m:null="true" />
+        <d:Website m:null="true" />
+      </m:properties>
+    </content>
+  </entry>
+</feed>
+

@@ -1,0 +1,23 @@
+{
+  "name": "my_xml",
+  "version": "0.0.1",
+  "description": "xml to json test transformation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "xml",
+    "json",
+    "tranformation"
+  ],
+  "author": "Daniela Ruiz",
+  "license": "ISC",
+  "dependencies": {
+    "install": "^0.1.8",
+    "mongodb": "^2.0.39",
+    "npm": "^2.13.1",
+    "xml-to-json": "^0.1.1",
+    "xml2js": "^0.4.9"
+  }
+}
