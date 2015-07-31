@@ -17,7 +17,11 @@
   "author": "Daniela Ruiz",
   "license": "ISC",
   "dependencies": {
+    "console": "^0.5.2",
+    "good": "^6.3.0",
+    "good-console": "^5.0.2",
     "hap": "^1.0.2",
-    "hapi": "^8.8.0"
+    "hapi": "^8.8.0",
+    "joi": "^6.6.1"
   }
 }
