@@ -33,3 +33,12 @@ exports.message = function (req, res) {
     res({name : name, host : host, email : email, message : message});
 
 };
+
+/**
+ *
+ * @param req
+ * @param res
+ */
+exports.socket = function (req, res) {
+
+};

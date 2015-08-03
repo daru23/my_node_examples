@@ -1,12 +1,18 @@
 #my_hapi
 
 Small HTTP aplication using Hapi.js and Joi.js
-Examples to demostrated how to use this modules together
+Examples to demonstrate how to use Hapi with some other modules
 
 #GET Request 
 ```
 curl -XGET http://localhost:8080/hello/name
 curl -XGET http://localhost:8080/hello/
+```
+
+#GET Socket.io Request 
+A simple chat client using socket.io
+```
+http://localhost:8080/streaming
 ```
 
 #POST Reques
@@ -26,5 +32,5 @@ curl -XPOST http://localhost.localdomain:8080/message \
 ```
 
 #To Do
-Handler static files
+Handler static files (routes some test done)
 Upload files

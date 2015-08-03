@@ -32,6 +32,21 @@ exports.routes = [
             }
         }
 
+    },
+    {
+        method  : 'GET',
+        path    : '/streaming',
+        handler : { file: "html/index.html" }
+
+    },
+    {
+        path: "/{static*}",
+        method: "GET",
+        handler: {
+            directory: {
+                path: "./http"
+            }
+        }
     }
 ];
 
