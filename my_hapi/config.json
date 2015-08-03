@@ -2,5 +2,6 @@
   "server" : {
     "port" : 8080,
     "host" : "localhost.localdomain"
-  }
+  },
+  "folder" : "/public/"
 }

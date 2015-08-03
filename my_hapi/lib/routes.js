@@ -47,6 +47,26 @@ exports.routes = [
                 path: "./http"
             }
         }
+    },
+    {
+        method   : 'GET',
+        path   : '/upload',
+        handler : {
+            file: 'html/upload.html'
+        }
+    },
+    {
+        method : 'POST',
+        path   : '/upload',
+        config : {
+
+            payload: {          // This configuration avoid to put file in memory but stream
+                maxBytes: 209715200,
+                output: 'stream',
+                parse: false
+            },
+            handler : handler.upload
+        }
     }
 ];
 

@@ -4,6 +4,9 @@
  * daru015@gmail.com
  * Created 7/31/15.
  */
+var fs = require('fs'),
+    Q = require('q'),
+    multiparty = require('multiparty');
 
 /**
  *
@@ -39,6 +42,44 @@ exports.message = function (req, res) {
  * @param req
  * @param res
  */
-exports.socket = function (req, res) {
+exports.handler = function (req, res) {
+    var form = new multiparty.Form();
 
+    form.parse(req.payload, function(err, fields, files) {
+        if (err) {
+            console.error(err)
+            return response('Something went wrong!');                     //Handler errors http
+        }else {
+            upload(files, response);
+
+        }
+    });
 };
+
+exports.upload = function(files, res) {
+
+    fs.readFile(files.file[0].path, function(err, body) {
+        var fileName = files.file[0].originalFilename,
+            output = config.folder + fileName;
+
+        writeFile(body, output).then(function (message) {
+            if (err) console.error(err);
+            console.log(message);
+            res(message);
+        })
+
+    });
+};
+
+function writeFile (body, path){                //Promise
+    var deferred = Q.defer();
+
+    fs.writeFile(path, body, function(err) {
+
+        //if(err){return deferred.reject(new Error(err));}
+        //console.log(body)
+        return deferred.resolve('The process has finished\nUploaded complete!');
+    });
+
+    return deferred.promise;
+}
