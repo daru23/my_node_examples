@@ -10,7 +10,6 @@ var Hapi    = require('hapi'),
     Good    = require('good'),
     config  = require('./config.json'),
     routes  = require('./lib/routes'),
-    socket  = require('./lib/socket'),
     server  = new Hapi.Server();
 
 //Server configurations
