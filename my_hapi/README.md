@@ -3,6 +3,12 @@
 Small HTTP aplication using Hapi.js and Joi.js
 Examples to demonstrate how to use Hapi with some other modules
 
+#First Run
+```
+npm install
+node index.js
+```
+
 #GET Request 
 ```
 curl -XGET http://localhost:8080/hello/name
