@@ -25,18 +25,18 @@ function myArrayLoopPromise (array){
     // array = [ { value : 1 }  , { value : 2 }, { value : 3} ]
     return new Promise(function (resolve, reject) {
 
-        var finalArray = [];
+        var promises = [];
 
         array.forEach(function (item) { // for each item in array it will apply the promises in the array of promises
 
-            Promise.all([myFirstPromise(item.value), mySecondPromise(item.value)]).then(function (result) {
-
-                finalArray.push({myFirstPromise : result[0], mySecondPromise : result[1]}); //store the result in a new array
-
-            });
+            promises.push(myFirstPromise(item.value));
+            promises.push(mySecondPromise(item.value));
         });
 
-        resolve(finalArray); // return what I promised
+        Promise.all(promises).then(function (result) {
+            resolve(result); // return what I promised
+        });
+
     })
 }
 
@@ -48,7 +48,7 @@ function myArrayLoopPromise (array){
 function myFirstPromise (value) {
 
     return new Promise(function(resolve, reject){
-        sleep(3000);
+        sleep(7000);
         resolve(value *2);
 
     });
@@ -62,7 +62,7 @@ function myFirstPromise (value) {
 function mySecondPromise (value) {
 
     return new Promise(function(resolve, reject){
-        sleep(1000);
+        sleep(7000);
         resolve(value -1);
 
     });
