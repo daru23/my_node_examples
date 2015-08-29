@@ -96,7 +96,7 @@ forLoopWithCallback(function (x) {
 
             setTimeout(function () {
                 console.log('first loop %s second loop %s',x, y);
-            }, 2000*(y+x)); // play with this numbers
+            }, 2000*(x+y)); // play with this numbers
 
         });
     }, 1000*x);
