@@ -61,11 +61,47 @@ function workingForLoop (){
 
 }
 
+/**
+ * Callback sintax
+ * @param callback
+ */
+function forLoopWithCallback (callback){
 
-workingForLoop();
+    for (var i = 0; i < 10; i ++){
+        callback(i);
+    }
+}
 
 
+/**
+ * How you use it
+ */
+//forLoopWithCallback(function (x) {
+//
+//    setTimeout(function () {
+//
+//        console.log('%s second passed!',x);
+//
+//    }, 1000*x);
+//
+//});
 
+/**
+ * Nested way to use it
+ */
+forLoopWithCallback(function (x) {
+
+    setTimeout(function () {
+        forLoopWithCallback(function (y) {
+
+            setTimeout(function () {
+                console.log('first loop %s second loop %s',x, y);
+            }, 2000*(y+x)); // play with this numbers
+
+        });
+    }, 1000*x);
+
+});
 
 /**
 * Delay the process as many milliseconds as it's set
