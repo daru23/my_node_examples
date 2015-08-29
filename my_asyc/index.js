@@ -15,6 +15,10 @@
 /* Not working way */
 /**
  * An for loop with a timeout between every cycle
+ * What is happening?
+ * The setTimeout is being execute but when the variable is going to be print
+ * it is looking to a reference of this variable, witch is already increment,
+ * because the for loop was already execute
  */
 function notWorkingForLoop (){
 
@@ -29,18 +33,6 @@ function notWorkingForLoop (){
 }
 
 /* Working way */
-/**
- * An for loop with a timeout between every cycle
- */
-function workingForLoop (){
-
-    for (var i = 0; i < 100; i ++){
-
-        timeOut(i);
-
-    }
-
-}
 
 /**
  * Set a time out and print counter in the console
@@ -49,12 +41,31 @@ function workingForLoop (){
 function timeOut (number){
 
     setTimeout(function () {
-        console.log('%s second passed!', number)
-    }, 1000); //sleep one second
+        console.log('%s second passed!', number);
+    }, 1000*number); //sleep one second
 
 }
 
+/**
+ * An for loop with a timeout between every cycle
+ * Solution: bound the setTimeout to the loop's variable
+ * so the loop will be delay in every cycle, and then the
+ * print of the variable in the console will be one ever X
+ * seconds
+ */
+function workingForLoop (){
+
+    for (var i = 0; i < 10; i ++){
+        timeOut(i);
+    }
+
+}
+
+
 workingForLoop();
+
+
+
 
 /**
 * Delay the process as many milliseconds as it's set
