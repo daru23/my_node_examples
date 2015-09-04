@@ -44,7 +44,7 @@ function notWorkingForLoop (){
  */
 function timeOut (number){
 
-    setTimeout(function () {
+    setTimeout(function (number) {
         console.log('%s second passed!', number);
     }, 1000*number); //sleep one second
 
@@ -82,17 +82,6 @@ function forLoopWithCallback (callback){
 
 
 /*
- * How you use it
- */
-//forLoopWithCallback(function (x) {
-//
-//    setTimeout(function () {
-//
-//        console.log('%s second passed!',x);
-//
-//    }, 1000*x);
-//
-//});
 
 /*
  * Nested way to use it
@@ -103,9 +92,9 @@ forLoopWithCallback(function (x) {
     setTimeout(function () {
         forLoopWithCallback(function (y) {
 
-            setTimeout(function () {
+            setTimeout(function (x, y) {
                 console.log('first loop %s second loop %s',x, y);
-            }, 2000*(x+y)); // play with this numbers
+            }, 2000*x*y, x, y); // play with this numbers
 
         });
     }, 1000*x);

@@ -1,0 +1,39 @@
+var a = require('mymodule')(config, bla);
+
+------------------
+
+module.exports = {
+	lol:function(){
+
+	},
+}
+
+------------------
+
+function lol() {
+ // bla
+}
+
+function rofl() {
+ // bla
+}
+
+
+module.exports = {
+	bla:bla,
+	rofl:rofl
+}
+
+------------------
+
+module.exports = function(config) {
+	// do stuff here
+
+	return {
+		bla:function() {
+			something(config.bla)
+		}
+	}	
+
+
+}
