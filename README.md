@@ -9,3 +9,5 @@ Some of my small projects while I am learning Node Js
 - my_promises
 - my_redis
 - my_xml
+
+Author: Daniela Ruiz
